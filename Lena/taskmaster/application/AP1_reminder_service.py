@@ -19,8 +19,8 @@ class ReminderService:
 
             try:
                 due = datetime.fromisoformat(task["due"])
-            #     TODO: too broad Exception
-            except Exception:
+
+            except (ValueError, TypeError):
                 continue
 
             if due < datetime.now():
