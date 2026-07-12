@@ -1,4 +1,4 @@
-from Lena.taskmaster.domain.task import Priority
+from Refactorings.taskmaster.domain.task import Priority
 
 # Hinweis: Änderungen am NotificationService für Vorschläge 1&3 hängen zusammen
 class NotificationService:

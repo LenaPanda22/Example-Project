@@ -1,5 +1,5 @@
-from Lena.logger import log_error, log_info
-from Lena.taskmaster.domain.user_types import AdminUser, ReadOnlyUser, User
+from Refactorings.logger import log_error, log_info
+from Refactorings.taskmaster.domain.user_types import AdminUser, ReadOnlyUser, User
 
 
 class UserService:

@@ -1,4 +1,4 @@
-from Lena.taskmaster.domain.user_types import AdminUser, ReadOnlyUser, User
+from Refactorings.taskmaster.domain.user_types import AdminUser, ReadOnlyUser, User
 
 
 class UserFactory:

@@ -1,4 +1,4 @@
-from Lena.database import Database
+from Refactorings.database import Database
 
 
 class TaskRepository:
