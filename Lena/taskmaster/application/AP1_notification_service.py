@@ -1,6 +1,6 @@
 from Lena.taskmaster.domain.task import Priority
 
-# Änderungen am NotificationService für Problem 1&2 hängen zusammen
+# Hinweis: Änderungen am NotificationService für Vorschläge 1&3 hängen zusammen
 class NotificationService:
 
     def __init__(self, escalation_map, user_manager):
