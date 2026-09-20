@@ -29,14 +29,13 @@ class TaskService:
             "due": due,
         }
 
-        if not self.task_repository.save(tid, task):
+        if not self.task_repository.save(task):
             return False
 
         self.notification_service.send_new_task_notification(
             assignee_id,
             prio,
-            title,
-            mode
+            title
         )
 
         self.count += 1
@@ -59,7 +58,7 @@ class TaskService:
         old = task["status"]
         task["status"] = new_status
 
-        self.task_repository.save(tid, task)
+        self.task_repository.save(task)
 
         if new_status == "done":
             self.notification_service.send_done_notification(task)
