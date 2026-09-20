@@ -1,3 +1,5 @@
+from datetime import datetime
+
 class StatisticsService:
 
     def __init__(self, task_repository):
@@ -29,5 +31,19 @@ class StatisticsService:
                 "cancelled",
             ):
                 stats[status] += 1
+
+            if task.get("due") is None:
+                continue
+
+            if status in ["done", "cancelled"]:
+                continue
+
+            try:
+                due = datetime.fromisoformat(task["due"])
+            except (ValueError, TypeError):
+                continue
+
+            if due < datetime.now():
+                stats["overdue"] += 1
 
         return stats
