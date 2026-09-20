@@ -17,3 +17,22 @@ class TaskRepository:
 
     def get_all(self):
         return self.db.all_tasks()
+
+    def find_tasks(self, status=None, priority=None, assignee_id=None):
+        tasks = self.db.all_tasks()
+
+        result = []
+
+        for task in tasks.values():
+            if status is not None and task.get("status") != status:
+                continue
+
+            if priority is not None and task.get("priority") != priority:
+                continue
+
+            if assignee_id is not None and task.get("assignee") != assignee_id:
+                continue
+
+            result.append(task)
+
+        return result

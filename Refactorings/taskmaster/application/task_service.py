@@ -106,3 +106,12 @@ class TaskService:
         result += " (" + task["status"] + ")"
 
         return result
+
+
+    # Feature
+    def find_tasks(self, status=None, priority=None, assignee_id=None):
+        return self.task_repository.find_tasks(
+            status=status,
+            priority=priority,
+            assignee_id=assignee_id
+        )
