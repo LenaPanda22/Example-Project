@@ -14,7 +14,7 @@ class EmailService:
 
     def send(self, to, subject, body):
         if to is None or "@" not in to:
-            log_error("Ungueltige E-Mail: " + str(to))
+            log_error("Ungültige E-Mail: " + str(to))
             return False
         if subject is None or subject == "":
             log_error("Subject darf nicht leer sein")
@@ -28,7 +28,7 @@ class EmailService:
 
     def send_sms(self, number, message):
         if number is None or len(number) < 5:
-            log_error("Ungueltige Telefonnummer")
+            log_error("Ungültige Telefonnummer")
             return False
         log("SMS -> " + number + " | " + message)
         return True
