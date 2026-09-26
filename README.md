@@ -35,9 +35,7 @@ example-project/
 ├── data/
 │   ├── tasks.json
 │   └── users.json
-├── doku/
-│   ├── todo
-│   └── todo
+├── doku/                  # Dokumente der 3 Phasen
 ├── legacy/                # Alte Dateien
 ├── taskmaster/
 │   ├── application/       # Zentrale Geschäftslogik
