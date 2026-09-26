@@ -1,7 +1,7 @@
 import unittest
 from datetime import datetime, timedelta
 
-from Refactorings.taskmaster.domain.task import (
+from taskmaster.domain.task import (
     Task,
     Priority,
     Status,

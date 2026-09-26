@@ -1,1 +1,1 @@
-{}
+{"1": {"id": 1, "name": "Anna", "email": "anna@example.com", "phone": "01701234567", "device": "device-1", "role": "admin"}, "2": {"id": 2, "name": "Ben", "email": "ben@example.com", "phone": "01709876543", "device": "device-2", "role": "user"}}

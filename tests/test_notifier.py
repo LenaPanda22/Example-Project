@@ -1,6 +1,6 @@
 import unittest
 
-from Refactorings.taskmaster.infrastructure.notifiers import (
+from taskmaster.infrastructure.notifiers import (
     SmtpNotifier,
     SmsNotifier,
     PushNotifier,
@@ -57,7 +57,7 @@ class TestNotifiers(unittest.TestCase):
         )
 
         recipient = {
-            "email": "ungueltig"
+            "email": "ungültig"
         }
 
         result = notifier.notify(
